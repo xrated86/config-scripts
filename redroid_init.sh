@@ -79,7 +79,7 @@ if $manageSetup ; then
     cd ~/
     mkdir -p cosmog/configs
     cd cosmog
-    wget 'https://meow.sylvie.fyi/static/cosmog.apk' -O cosmog.apk
+    wget 'https://munchlax.nl/dl/cosmog.apk' -O cosmog.apk
     git clone https://github.com/sy1vi3/joltik.git
     cd joltik
     python3 joltik.py --version "$version"
@@ -182,4 +182,6 @@ if $managePm2 ; then
     cd ~/cosmog/houndour
     pm2 start "python3 houndour.py" --name houndour
     cd ~/cosmog
+    pm2 startup
+    pm2 save
 fi
